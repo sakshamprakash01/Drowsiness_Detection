@@ -4,17 +4,18 @@ things to do:
 - may need to add "runs" folder
 - run "python app.py" to run the code
 
-folder structure:
-runs
-static
-  - detect
-  - initial
-  - uploads
-  - style.css
-templates
-  - cam.html
-  - image.html
-  - index.html
-app.py
-best-yolo8.tiny.pt
-requirements.txt
+folder structure:  
+runs  
+static  
+  &nbsp;&nbsp;&nbsp;&nbsp; - detect  
+  &nbsp;&nbsp;&nbsp;&nbsp; - initial  
+  &nbsp;&nbsp;&nbsp;&nbsp; - uploads  
+  &nbsp;&nbsp;&nbsp;&nbsp; - style.css    
+templates  
+  &nbsp;&nbsp;&nbsp;&nbsp; - cam.html  
+  &nbsp;&nbsp;&nbsp;&nbsp; - image.html  
+  &nbsp;&nbsp;&nbsp;&nbsp; - index.html  
+app.py  
+best-yolo8.tiny.pt  
+requirements.txt  
+
