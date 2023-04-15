@@ -1,0 +1,51 @@
+main {
+  width: 100%;
+  height: auto;
+  padding: 1em 0em 8em;
+  margin: 2% auto;
+  background: linear-gradient(to bottom right, #0066ff ,pink);
+}
+
+#title {
+  text-align: center;
+}
+
+div {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+#image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo {
+  border-radius: 50%;
+}
+
+input[type="file"] {
+  background-color: #666699;
+  border: 2px solid #9966ff;
+  color: #ffffff;
+}
+
+button {
+  display: block;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: #62629b;
+  border-color: white;
+  color: #ffffff;
+}
+
+/* image.html */
+.img_pred, .video_pred {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
