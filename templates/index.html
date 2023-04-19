@@ -5,24 +5,33 @@
   <link rel="stylesheet" type="text/css" href="static/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Drowsiness Detection</title>
+  <script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById("demo-image").src = e.target.result;
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
 </head>
 <body>
   <main>
-    <h1 id="title">Drowsiness Detection</h1>
+    <h1 id="title">Drowsiness Detection (Active/Fatigued)</h1>
     <div>
       <div id="image">
-        <h2>Active</h2>
-        <img class='demo' src="static/initial/active.jpg" alt="active" width="360" height="360">
+        <img class='demo' src="static/initial/active.jpg" alt="active" width="360" height="360" id="demo-image">
       </div>
       <div id="image">
-        <h2>Fatigued</h2>
         <img class='demo' src="static/initial/fatigued.jpg" alt="fatigued" width="360" height="360">
       </div>
     </div>
     <div>
       <form action='/image' method='POST' enctype="multipart/form-data">
         <h1>Upload any image</h1>
-        <input type="file" name="file">
+        <input type="file" name="file" onchange="readURL(this);">
         <br>
         <div>
           <button type="submit" name="image">Upload</button>
