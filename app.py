@@ -49,8 +49,13 @@ def cam():
     return render_template('cam.html')
 
 def generate_frames():
-    camera = cv2.VideoCapture(0)
-    # model = YOLO('best.pt')
+    for i in range(10):
+        camera = cv2.VideoCapture(i)
+        if camera.read()[0]:
+            break
+    else:
+        camera = cv2.VideoCapture(0)
+        
     model = YOLO('best-yolo8-tiny.pt')
     while True:
         ret, frame = camera.read()
