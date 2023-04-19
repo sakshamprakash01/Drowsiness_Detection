@@ -18,6 +18,9 @@ def image():
         if 'file' in request.files:
             # save the input file to uploads folder
             f = request.files['file']
+            if f.filename == '':
+                print("No filename")
+                return render_template('index.html', error_message="Error: Select an image to upload.")
             basepath = os.path.dirname(__file__)
             filepath = os.path.join(basepath,'static','uploads',f.filename)
             # print("upload folder is", filepath)
