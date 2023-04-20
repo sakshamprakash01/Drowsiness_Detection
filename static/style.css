@@ -1,57 +1,93 @@
+/* Change the background gradient */
 main {
   width: 100%;
   height: auto;
   padding: 1em 0em 8em;
   margin: 2% auto;
-  background: linear-gradient(to bottom right, #0066ff ,pink);
+  background: linear-gradient(to bottom right, #0066ff , pink);
 }
 
+/* Increase font size and font weight for title */
 #title {
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-div {
-  display:flex;
-  justify-content: space-evenly;
-  align-items: baseline;
-}
-
-#image {
+/* Style upload form */
+form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-top: 3rem;
 }
 
-.demo {
-  border-radius: 50%;
-}
-
-.error {
-  color: red;
+h1 {
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 input[type="file"] {
   background-color: #666699;
   border: 2px solid #9966ff;
   color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
-button {
-  display: block;
-  align-items: center;
-  font-size: 1.1rem;
+button[type="submit"] {
+  font-size: 1.2rem;
+  font-weight: bold;
   background-color: #62629b;
   border-color: white;
   color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-/* image.html */
-.img_pred, .video_pred {
+button[type="submit"]:hover {
+  background-color: #8c8cb2;
+}
+
+/* Adjust image size for better alignment */
+#images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
+}
+
+#images img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  margin: 2rem;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#images img:hover {
+  transform: scale(1.1);
+}
+
+div.images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Style error message */
+.error {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
